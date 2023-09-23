@@ -29,7 +29,7 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${service == 'dreditCard'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0is49af" name="Business-Card" sourceRef="Gateway_1egrerz" targetRef="Business-Card">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${service == 'businessCard'}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${service == 'businessCard' and AccountNumber !=0}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:userTask id="Business-Card" name="Business-Card">
       <bpmn:extensionElements>
@@ -164,10 +164,6 @@
           <dc:Bounds x="433" y="103" width="73" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_199bm5n_di" bpmnElement="Flow_199bm5n">
-        <di:waypoint x="660" y="120" />
-        <di:waypoint x="795" y="120" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0kh63nf_di" bpmnElement="Flow_0kh63nf">
         <di:waypoint x="660" y="257" />
         <di:waypoint x="795" y="257" />
@@ -177,13 +173,6 @@
         <di:waypoint x="820" y="370" />
         <di:waypoint x="820" y="282" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0coj307_di" bpmnElement="Flow_0coj307">
-        <di:waypoint x="820" y="145" />
-        <di:waypoint x="820" y="232" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="829" y="173" width="41" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0du08j2_di" bpmnElement="Flow_0du08j2">
         <di:waypoint x="845" y="257" />
         <di:waypoint x="900" y="257" />
@@ -192,11 +181,22 @@
         <di:waypoint x="1000" y="257" />
         <di:waypoint x="1062" y="257" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_199bm5n_di" bpmnElement="Flow_199bm5n">
+        <di:waypoint x="660" y="120" />
+        <di:waypoint x="795" y="120" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0ssu0kr_di" bpmnElement="Flow_0ssu0kr">
         <di:waypoint x="845" y="120" />
         <di:waypoint x="1012" y="120" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="900" y="103" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0coj307_di" bpmnElement="Flow_0coj307">
+        <di:waypoint x="820" y="145" />
+        <di:waypoint x="820" y="232" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="829" y="173" width="41" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
