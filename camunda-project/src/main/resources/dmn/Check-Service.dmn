@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0usxmr2" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.14.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
+  <decision id="Check-Service" name="Check-Service">
+    <decisionTable id="DecisionTable_0uiiw5t">
+      <input id="Input_1" label="Input 1" camunda:inputVariable="checkValidation">
+        <inputExpression id="InputExpression_1" typeRef="string" expressionLanguage="juel">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Output 1" name="isValidation" typeRef="string" />
+      <output id="OutputClause_01aib70" label="Output 2" name="isSignature" typeRef="string" />
+      <rule id="DecisionRule_1rem68x">
+        <inputEntry id="UnaryTests_0uto779">
+          <text>"business"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nrshq3">
+          <text>"YES"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fr4a0l">
+          <text>"NO"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0adg93q">
+        <inputEntry id="UnaryTests_15hkwa1">
+          <text>"credit"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12s6yz5">
+          <text>"NO"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1om5ogi">
+          <text>"YES"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sv26c4">
+        <inputEntry id="UnaryTests_1ryxgjx">
+          <text>"debit"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hnr320">
+          <text>"NO"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qrtk9z">
+          <text>"YES"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0c8ig7s">
+        <inputEntry id="UnaryTests_1dzrl7x">
+          <text>"saving"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1smnfzx">
+          <text>"NO"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x7e7ff">
+          <text>"NO"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Check-Service">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
