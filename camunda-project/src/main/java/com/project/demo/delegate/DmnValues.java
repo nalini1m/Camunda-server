@@ -27,8 +27,6 @@ public class DmnValues implements JavaDelegate {
         for(Map<String, Object> map:result){
             delegateExecution.setVariable("isValidation",map.get("isValidation"));
             delegateExecution.setVariable("isSignature",map.get("isSignature"));
-
-
         }
 
         Map<String,Object> map = delegateExecution.getVariables();
