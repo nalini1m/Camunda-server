@@ -43,10 +43,10 @@
       <bpmn:incoming>Flow_1fpe80q</bpmn:incoming>
       <bpmn:outgoing>Flow_1qbw21y</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="Flow_06yxz5w" sourceRef="Activity_0eltt5r" targetRef="Activity_0yzn953" />
-    <bpmn:serviceTask id="Activity_0yzn953">
+    <bpmn:sequenceFlow id="Flow_06yxz5w" sourceRef="Activity_0eltt5r" targetRef="Event_06lr14y" />
+    <bpmn:endEvent id="Event_06lr14y">
       <bpmn:incoming>Flow_06yxz5w</bpmn:incoming>
-    </bpmn:serviceTask>
+    </bpmn:endEvent>
   </bpmn:process>
   <bpmn:message id="Message_2f22d3v" name="Call-By-Signal" />
   <bpmn:signal id="Signal_29ihh1m" name="Start-By-Signal" />
@@ -80,8 +80,8 @@
       <bpmndi:BPMNShape id="Gateway_0uekzcl_di" bpmnElement="Gateway_0aqroju" isMarkerVisible="true">
         <dc:Bounds x="725" y="145" width="50" height="50" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1xxlfck_di" bpmnElement="Activity_0yzn953">
-        <dc:Bounds x="1070" y="130" width="100" height="80" />
+      <bpmndi:BPMNShape id="Event_06lr14y_di" bpmnElement="Event_06lr14y">
+        <dc:Bounds x="1052" y="152" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_17y0yrb_di" bpmnElement="Flow_17y0yrb">
         <di:waypoint x="215" y="117" />
@@ -116,7 +116,7 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_06yxz5w_di" bpmnElement="Flow_06yxz5w">
         <di:waypoint x="970" y="170" />
-        <di:waypoint x="1070" y="170" />
+        <di:waypoint x="1052" y="170" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

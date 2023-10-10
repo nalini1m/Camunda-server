@@ -13,7 +13,7 @@
     <bpmn:startEvent id="StartEvent_1" name="Start by Time">
       <bpmn:outgoing>Flow_0r0zly1</bpmn:outgoing>
       <bpmn:timerEventDefinition id="TimerEventDefinition_1w9cojt">
-        <bpmn:timeCycle xsi:type="bpmn:tFormalExpression">0 0/10 * * * ?</bpmn:timeCycle>
+        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT1H</bpmn:timeDuration>
       </bpmn:timerEventDefinition>
     </bpmn:startEvent>
     <bpmn:boundaryEvent id="Event_0a1vrjb" attachedToRef="Activity_1yhrns1">
